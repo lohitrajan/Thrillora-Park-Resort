@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thrillora Parks & Resorts – Login</title>
+  <link rel="icon" href="Favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link rel="icon" href="Favicon.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .bg {
+      position: fixed;
+      inset: 0;
+      background-image: url("Background_img.png");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+    .bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 16px;
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      border-top: 4px solid #ffd500;
+    }
+    .logo-wrap {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #007bff, #0056cc);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: #ffd500;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    }
+    .card h1 {
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #1e2a3a;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+    .card .subtitle {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #666;
+      margin-bottom: 28px;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1e2a3a;
+      margin-bottom: 6px;
+    }
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 0.9rem;
+      color: #222;
+      background: #fafafa;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus {
+      border-color: #007bff;
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+    .error-msg {
+      display: none;
+      font-size: 0.78rem;
+      color: #d9534f;
+      margin-top: 5px;
+    }
+    .error-msg.show {
+      display: block;
+    }
+    .row-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      font-size: 0.83rem;
+    }
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: #444;
+      cursor: pointer;
+    }
+    .remember-me input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      accent-color: #ffd500;
+      cursor: pointer;
+    }
+    .forgot-link {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .forgot-link:hover {
+      text-decoration: underline;
+      color: #0056cc;
+    }
+    .btn-login {
+      width: 100%;
+      padding: 13px;
+      background: #ffd500;
+      color: #1e2a3a;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: background 0.25s, transform 0.15s, box-shadow 0.25s;
+      box-shadow: 0 4px 14px rgba(255, 213, 0, 0.45);
+    }
+    .btn-login:hover {
+      background: #e6c200;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(255, 213, 0, 0.55);
+    }
+    .btn-login:active {
+      transform: translateY(0);
+    }
+    .success-msg {
+      display: none;
+      text-align: center;
+      color: #007bff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 16px;
+      padding: 10px;
+      background: #e8f2ff;
+      border-radius: 8px;
+      border: 1px solid #b3d1ff;
+    }
+    .success-msg.show {
+      display: block;
+    }
+    .card-footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #999;
+    }
+    .card-footer a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card-footer a:hover {
+      text-decoration: underline;
+      color: #0056cc;
+    }
+    @media (max-width: 480px) {
+      .card {
+        padding: 30px 22px;
+      }
+      .card h1 {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="card">
+    <div class="logo-wrap">
+      <div class="logo-icon">
+        <i class="fa-solid fa-ticket"></i>
+      </div>
+    </div>
+    <h1>Welcome to Thrillora</h1>
+    <p class="subtitle">Login to continue your adventure</p>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com" />
+        <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" />
+        <span class="error-msg" id="passwordError">Password must be at least 6 characters.</span>
+      </div>
+      <div class="row-options">
+        <label class="remember-me">
+          <input type="checkbox" id="rememberMe" />
+          Remember Me
+        </label>
+        <a href="#" class="forgot-link"><a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&dsh=S53612506%3A1775281776717809&followup=https%3A%2F%2Faccounts.google.com%2F&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AT1y2_U9BdeZO3OCYE5CZ4TJ84v-yL6CWaYmQu6vhXGjXrnncgh6S7Fk0aHJRGOx6Uqw3FXgi5nLXw" target="_blank">Forgot Password?</a>
+      </div>
+      <button type="submit" class="btn-login" onclick="validateForm(event)">
+        <i class="fa-solid fa-right-to-bracket"></i> LOGIN
+      </button>
+      <div class="success-msg" id="successMsg"><i class="fa-solid fa-check"></i> Login Successful! Welcome back to Thrillora!</div>
+    </form>
+    <div class="card-footer">
+      Don't have an account? <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&dsh=S53612506%3A1775281776717809&followup=https%3A%2F%2Faccounts.google.com%2F&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AT1y2_U9BdeZO3OCYE5CZ4TJ84v-yL6CWaYmQu6vhXGjXrnncgh6S7Fk0aHJRGOx6Uqw3FXgi5nLXw" target="_blank">Sign up here</a>
+    </div>
+  </div>
+  <script>
+    function validateForm(event) {
+  event.preventDefault(); 
+  var email = document.getElementById('email').value.trim();
+  var password = document.getElementById('password').value.trim();
+  var emailError = document.getElementById('emailError');
+  var passwordError = document.getElementById('passwordError');
+  var successMsg = document.getElementById('successMsg');
+  emailError.classList.remove('show');
+  passwordError.classList.remove('show');
+  successMsg.classList.remove('show');
+  var valid = true;
+  if (email === '') {
+    emailError.textContent = 'Email address is required.';
+    emailError.classList.add('show');
+    valid = false;
+  } else {
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      emailError.textContent = 'Please enter a valid email address.';
+      emailError.classList.add('show');
+      valid = false;
+    }
+  }
+  if (password === '') {
+    passwordError.textContent = 'Password is required.';
+    passwordError.classList.add('show');
+    valid = false;
+  } else if (password.length < 6) {
+    passwordError.textContent = 'Password must be at least 6 characters.';
+    passwordError.classList.add('show');
+    valid = false;
+  }
+  if (valid) {
+    alert("Login Successfully Back To the Home Page !");
+    successMsg.classList.add('show');
+  }
+}
+  </script>
+</body>
+</html>

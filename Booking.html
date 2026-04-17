@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thrillora Parks & Resorts – Book Tickets</title>
+  <link rel="icon" href="Favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+    .bg {
+      position: fixed;
+      inset: 0;
+      background-image: url("Background_img.png");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+    .bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 10, 40, 0.65);
+      z-index: -1;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 36px 34px 30px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 20px 60px rgba(0, 30, 100, 0.35);
+      border-top: 5px solid #007bff;
+    }
+    .logo-wrap { text-align: center; margin-bottom: 8px; }
+    .logo-icon {
+      width: 58px;
+      height: 58px;
+      background: linear-gradient(135deg, #007bff, #ffd500);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(26, 86, 219, 0.4);
+    }
+    .card h1 {
+      text-align: center;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #0f2d6b;
+      margin-top: 10px;
+      margin-bottom: 3px;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 0.84rem;
+      color: #6b7a99;
+      margin-bottom: 26px;
+    }
+    .section-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #007bff;
+      margin-bottom: 12px;
+      padding-bottom: 5px;
+      border-bottom: 1.5px solid #dbeafe;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: #1e3a6e;
+      margin-bottom: 5px;
+    }
+    .form-group input[type="date"] {
+      width: 100%;
+      padding: 10px 13px;
+      border: 1.5px solid #c7d7f5;
+      border-radius: 8px;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      background: #f5f8ff;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus {
+      border-color: #007bff;
+      background: #fff;
+    }
+    hr.divider {
+      border: none;
+      border-top: 1.5px dashed #dbeafe;
+      margin: 18px 0;
+    }
+    .ticket-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f0f5ff;
+      border: 1.5px solid #c7d7f5;
+      border-radius: 10px;
+      padding: 13px 15px;
+      margin-bottom: 10px;
+    }
+    .t-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0f2d6b;
+    }
+    .t-sub {
+      font-size: 0.74rem;
+      color: #7a8fba;
+      margin-top: 1px;
+    }
+    .t-price {
+      font-size: 0.8rem;
+      color: #007bff;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+    .counter { display: flex; align-items: center; gap: 10px; }
+    .counter button {
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid #007bff;
+      background: #fff;
+      color: #007bff;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background 0.2s, color 0.2s;
+    }
+    .counter button:hover { background: #007bff; color: #fff; }
+    .counter span {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f2d6b;
+      min-width: 22px;
+      text-align: center;
+    }
+    .summary-box {
+      background: #f0f5ff;
+      border: 1.5px solid #c7d7f5;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      font-size: 0.84rem;
+    }
+    .sum-row {
+      display: flex;
+      justify-content: space-between;
+      color: #3d5a99;
+      margin-bottom: 6px;
+    }
+    .sum-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f2d6b;
+      border-top: 1.5px solid #c7d7f5;
+      padding-top: 10px;
+      margin-top: 8px;
+    }
+    .sum-total span:last-child { color: #d97706; }
+    .pay-methods { display: flex; gap: 8px; margin-bottom: 14px; }
+    .pay-option {
+      flex: 1;
+      text-align: center;
+      border: 1.5px solid #c7d7f5;
+      border-radius: 8px;
+      padding: 9px 4px;
+      cursor: pointer;
+      font-size: 0.76rem;
+      color: #6b7a99;
+      font-weight: 500;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+    .pay-option i {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+      color: #aab8d8;
+      transition: color 0.2s;
+    }
+    .pay-option:hover,
+    .pay-option.active {
+      border-color: #007bff;
+      background: #eef3ff;
+      color: #007bff;
+    }
+    .pay-option:hover i,
+    .pay-option.active i { color: #007bff; }
+    .btn-pay {
+      width: 100%;
+      padding: 13px;
+      background: linear-gradient(135deg, #007bff, #1e40af);
+      color: #fff;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 0.4px;
+      transition: background 0.25s, transform 0.15s, box-shadow 0.25s;
+      box-shadow: 0 4px 14px rgba(26, 86, 219, 0.35);
+    }
+    .btn-pay:hover {
+      background: linear-gradient(135deg, #1e40af, #1a3a8f);
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(26, 86, 219, 0.45);
+    }
+    .btn-pay:active { transform: translateY(0); }
+    .btn-pay .fa-lock { color: #ffd500; }
+    @media (max-width: 480px) {
+      .card { padding: 26px 16px 22px; }
+      .card h1 { font-size: 1.35rem; }
+      .pay-option { font-size: 0.7rem; padding: 8px 2px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="card">
+    <div class="logo-wrap">
+      <div class="logo-icon"><i class="fa-solid fa-ticket"></i></div>
+    </div>
+    <h1>Book Your Tickets</h1>
+    <p class="subtitle">Thrillora Parks & Resorts — Plan your adventure</p>
+    <div class="section-title"><i class="fa fa-calendar-days"></i>&nbsp; Visit Details</div>
+    <div class="form-group">
+      <label for="visitDate">Visit Date</label>
+      <input type="date" id="visitDate" />
+    </div>
+    <hr class="divider"/>
+    <div class="section-title"><i class="fa fa-users"></i>&nbsp; Number of Persons</div>
+    <div class="ticket-row">
+      <div class="ticket-info">
+        <div class="t-label"><i class="fa fa-person"></i>&nbsp; Adult</div>
+        <div class="t-sub">Age 13 and above</div>
+        <div class="t-price">&#8377; 600 per person</div>
+      </div>
+      <div class="counter">
+        <button type="button" onclick="change('adult', -1)">&#8722;</button>
+        <span id="adultCount">0</span>
+        <button type="button" onclick="change('adult', 1)">&#43;</button>
+      </div>
+    </div>
+    <div class="ticket-row">
+      <div class="ticket-info">
+        <div class="t-label"><i class="fa fa-child"></i>&nbsp; Child</div>
+        <div class="t-sub">Age 3 &ndash; 12 years</div>
+        <div class="t-price">&#8377; 350 per person</div>
+      </div>
+      <div class="counter">
+        <button type="button" onclick="change('child', -1)">&#8722;</button>
+        <span id="childCount">0</span>
+        <button type="button" onclick="change('child', 1)">&#43;</button>
+      </div>
+    </div>
+    <hr class="divider"/>
+    <div class="section-title"><i class="fa fa-receipt"></i>&nbsp; Order Summary</div>
+    <div class="summary-box">
+      <div class="sum-row"><span>Adults</span><span id="sumAdult">0 &times; &#8377;600 = &#8377;0</span></div>
+      <div class="sum-row"><span>Children</span><span id="sumChild">0 &times; &#8377;350 = &#8377;0</span></div>
+      <div class="sum-total"><span>Total Amount</span><span id="sumTotal">&#8377; 0</span></div>
+    </div>
+    <hr class="divider"/>
+    <div class="section-title"><i class="fa fa-credit-card"></i>&nbsp; Payment Method</div>
+    <div class="pay-methods">
+      <div class="pay-option active" onclick="selectPay(this)">
+        <i class="fa fa-credit-card"></i>Card
+      </div>
+      <div class="pay-option" onclick="selectPay(this)">
+        <i class="fa fa-mobile-screen"></i>UPI
+      </div>
+      <div class="pay-option" onclick="selectPay(this)">
+        <i class="fa fa-building-columns"></i>Net Banking
+      </div>
+      <div class="pay-option" onclick="selectPay(this)">
+        <i class="fa fa-wallet"></i>Wallet
+      </div>
+    </div>
+    <button class="btn-pay" onclick="confirmPayment()">
+      <i class="fa fa-lock"></i>&nbsp; Confirm & Pay
+    </button>
+  </div>
+  <script>
+    var adult = 0, child = 0, ap = 600, cp = 350;
+    function change(type, delta) {
+      if (type === 'adult') { adult = Math.max(0, adult + delta); document.getElementById('adultCount').textContent = adult; }
+      else { child = Math.max(0, child + delta); document.getElementById('childCount').textContent = child; }
+      recalc();
+    }
+    function recalc() {
+      document.getElementById('sumAdult').textContent = adult + ' x' + ap + ' = ' + (adult * ap);
+      document.getElementById('sumChild').textContent = child + ' x ' + cp + ' = ' + (child * cp);
+      document.getElementById('sumTotal').textContent = ' ' + (adult * ap + child * cp);
+    }
+    function selectPay(el) {
+      document.querySelectorAll('.pay-option').forEach(function(o) { o.classList.remove('active'); });
+      el.classList.add('active');
+    }
+    function confirmPayment() {
+      alert('Redirecting to Bank Server!');
+    }
+  </script>
+</body>
+</html>
