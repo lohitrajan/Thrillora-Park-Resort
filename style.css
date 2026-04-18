@@ -7,6 +7,11 @@
 html {
     scroll-behavior: smooth;
 }
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
 .section-header {
     text-align: center;
     padding: 60px 20px 40px;
@@ -1211,6 +1216,41 @@ input[type="radio"] { display: none; }
     .newsletter { flex-direction: column; }
     .newsletter input,
     .newsletter button { width: 100%; border-radius: 14px; }
+    @media (max-width: 600px) {
+    .hero {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .hero-content {
+        width: 100%;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+    .park-cards-wrapper {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0 10px;
+    }
+    .park-cards {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    .card {
+        box-sizing: border-box;
+    }
+    .navbar {
+        padding: 6px 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .nav-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 @media (max-width: 380px) {
     .hero h1 { font-size: 22px; }
