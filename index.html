@@ -8,60 +8,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Favicon.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-    <div class="logo">
-    <img src="Logo.png" alt="Thrillora Logo">
-</div>
-    <ul class="nav-menu">
-        <li><a href="#Park"><i class="fa-solid fa-location-dot"></i> PARK</a></li>
-        <li><a href="#Ride"><i class="fa-solid fa-dharmachakra"></i> RIDES</a></li>
-        <li><a href="#Fun"><i class="fa-solid fa-gift"></i> FUN ZONES</a></li>
-        <li><a href="#Offer"><i class="fa-solid fa-tags"></i> OFFERS</a></li>
-        <li><a href="#Restaurants"><i class="fa-solid fa-utensils"></i> RESTAURANTS</a></li>
-        <li><a href="#Events"><i class="fa-solid fa-calendar"></i> EVENTS</a></li>
-    </ul>
-    <div class="nav-buttons">
-        <button class="login-btn" onclick="window.open('Login.html','_blank')">
-            <i class="fa-solid fa-user"></i> LOGIN
-        </button>
-        <button class="ticket-btn" onclick="window.open('Booking.html','_blank')">
-            BOOK TICKETS <i class="fa-solid fa-ticket"></i>
-        </button>
-        <i class="fa-solid fa-bars menu-icon" id="menuIcon"></i>
-    </div>
-</div>
-<!-- Nav overlay -->
-<div class="nav-overlay" id="navOverlay"></div>
-<!-- Mobile slide-in menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-header">
-        <img src="Logo.png" alt="Thrillora Logo">
-        <button class="close-menu" id="closeMenu" aria-label="Close menu">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-    </div>
-    <ul class="mobile-nav-menu">
-        <li><a href="#Park"><i class="fa-solid fa-location-dot"></i> PARK</a></li>
-        <li><a href="#Ride"><i class="fa-solid fa-dharmachakra"></i> RIDES</a></li>
-        <li><a href="#Fun"><i class="fa-solid fa-gift"></i> FUN ZONES</a></li>
-        <li><a href="#Offer"><i class="fa-solid fa-tags"></i> OFFERS</a></li>
-        <li><a href="#Restaurants"><i class="fa-solid fa-utensils"></i> RESTAURANTS</a></li>
-        <li><a href="#Events"><i class="fa-solid fa-calendar"></i> EVENTS</a></li>
-    </ul>
-    <div class="mobile-buttons">
-        <button class="login-btn" onclick="window.open('Login.html','_blank')">
-            <i class="fa-solid fa-user"></i> LOGIN
-        </button>
-        <button class="ticket-btn" onclick="window.open('Booking.html','_blank')">
-            BOOK TICKETS <i class="fa-solid fa-ticket"></i>
-        </button>
-    </div>
-</div>
+            <div class="logo">
+                <img src="Logo.png" alt="Thrillora Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#Park"><i class="fa-solid fa-location-dot"></i> PARK</a></li>
+                <li><a href="#Ride"><i class="fa-solid fa-dharmachakra"></i> RIDES</a></li>
+                <li><a href="#Fun"><i class="fa-solid fa-gift"></i> FUN ZONES</a></li>
+                <li><a href="#Offer"><i class="fa-solid fa-tags"></i> OFFERS</a></li>
+                <li><a href="#Restaurants"><i class="fa-solid fa-utensils"></i> RESTAURANTS</a></li>
+                <li><a href="#Events"><i class="fa-solid fa-calendar"></i> EVENTS</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="login-btn" onclick="window.open('Login.html','_blank')">
+                    <i class="fa-solid fa-user"></i> LOGIN
+                </button>
+                <button class="ticket-btn" onclick="window.open('Booking.html','_blank')">
+                    BOOK TICKETS <i class="fa-solid fa-ticket"></i>
+                </button>
+                <i class="fa-solid fa-bars menu-icon" id="menuIcon"></i>
+            </div>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <img src="Logo.png" alt="Thrillora Logo">
+                <button class="close-menu" id="closeMenu" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-menu">
+                <li><a href="#Park"><i class="fa-solid fa-location-dot"></i> PARK</a></li>
+                <li><a href="#Ride"><i class="fa-solid fa-dharmachakra"></i> RIDES</a></li>
+                <li><a href="#Fun"><i class="fa-solid fa-gift"></i> FUN ZONES</a></li>
+                <li><a href="#Offer"><i class="fa-solid fa-tags"></i> OFFERS</a></li>
+                <li><a href="#Restaurants"><i class="fa-solid fa-utensils"></i> RESTAURANTS</a></li>
+                <li><a href="#Events"><i class="fa-solid fa-calendar"></i> EVENTS</a></li>
+            </ul>
+            <div class="mobile-buttons">
+                <button class="login-btn" onclick="window.open('Login.html','_blank')">
+                    <i class="fa-solid fa-user"></i> LOGIN
+                </button>
+                <button class="ticket-btn" onclick="window.open('Booking.html','_blank')">
+                    BOOK TICKETS <i class="fa-solid fa-ticket"></i>
+                </button>
+            </div>
+        </div>
     </nav>
     <section class="hero" id="Park">
         <video autoplay muted loop class="bg-video" poster="bg.jpg">
@@ -73,36 +70,38 @@
             <h1>INDIA'S LARGEST <br> AMUSEMENT PARK CHAIN!</h1>
             <p>Thrills, splashes, and memories — all in one place.</p>
             <h3 class="select-text">SELECT YOUR THRILLORA PARK</h3><br>
-            <div class="park-cards">
-                <div class="card">
-                    <img src="chennai.jpg" alt="Chennai Park">
-                    <h4>CHENNAI</h4>
-                    <h5>~Park</h5>
-                </div>
-                <div class="card">
-                    <img src="kochi.jpg" alt="Kochi Park">
-                    <h4>KOCHI</h4>
-                    <h5>~Park + Resorts</h5>
-                </div>
-                <div class="card">
-                    <img src="bangalore.jpg" alt="Bengaluru Park">
-                    <h4>BENGALURU</h4>
-                    <h5>~Park</h5>
-                </div>
-                <div class="card">
-                    <img src="hyderabad.jpg" alt="Hyderabad Park">
-                    <h4>HYDERABAD</h4>
-                    <h5>~Park</h5>
-                </div>
-                <div class="card">
-                    <img src="bhubaneswar.jpg" alt="Bhubaneswar Park">
-                    <h4>BHUBANESWAR</h4>
-                    <h5>~Park</h5>
-                </div>
-                <div class="card">
-                    <img src="kolkata.png" alt="Kolkata Park">
-                    <h4>KOLKATA</h4>
-                    <h5>~Park + Resort + Beach</h5>
+            <div class="park-cards-wrapper">
+                <div class="park-cards">
+                    <div class="card">
+                        <img src="chennai.jpg" alt="Chennai Park">
+                        <h4>CHENNAI</h4>
+                        <h5>~Park</h5>
+                    </div>
+                    <div class="card">
+                        <img src="kochi.jpg" alt="Kochi Park">
+                        <h4>KOCHI</h4>
+                        <h5>~Park + Resorts</h5>
+                    </div>
+                    <div class="card">
+                        <img src="bangalore.jpg" alt="Bengaluru Park">
+                        <h4>BENGALURU</h4>
+                        <h5>~Park</h5>
+                    </div>
+                    <div class="card">
+                        <img src="hyderabad.jpg" alt="Hyderabad Park">
+                        <h4>HYDERABAD</h4>
+                        <h5>~Park</h5>
+                    </div>
+                    <div class="card">
+                        <img src="bhubaneswar.jpg" alt="Bhubaneswar Park">
+                        <h4>BHUBANESWAR</h4>
+                        <h5>~Park</h5>
+                    </div>
+                    <div class="card">
+                        <img src="kolkata.png" alt="Kolkata Park">
+                        <h4>KOLKATA</h4>
+                        <h5>~Park + Resort + Beach</h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,7 +111,7 @@
         <div class="section-header">
             <span class="section-label">Explore</span>
             <h1>OUR ICONIC RIDES</h1>
-            <p>Step into a world of thrill, speed, and unforgettable adventure.Experience adrenaline-pumping rides with twists, turns, and drops.Enjoy refreshing water rides that bring fun and cool excitement.Create joyful memories with family-friendly attractions for all ages.Relive timeless fun with our classic and iconic experiences.Built with world-class safety, comfort, and innovative design.Get ready to explore, enjoy, and make unforgettable moments!</p>
+            <p>Step into a world of thrill, speed, and unforgettable adventure. Experience adrenaline-pumping rides with twists, turns, and drops. Enjoy refreshing water rides that bring fun and cool excitement. Create joyful memories with family-friendly attractions for all ages.</p>
         </div>
         <input type="radio" name="ride" id="land" checked>
         <input type="radio" name="ride" id="water">
@@ -184,7 +183,7 @@
                 <div class="ride-content">
                     <h3>Convoy</h3>
                     <p>Fun ride through terrain.</p>
-                   <button onclick="openRidePopup('convoy')">RIDE DETAILS</button>
+                    <button onclick="openRidePopup('convoy')">RIDE DETAILS</button>
                 </div>
             </div>
             <div class="ride-card kids">
@@ -195,18 +194,16 @@
                     <button onclick="openRidePopup('funkymonkey')">RIDE DETAILS</button>
                 </div>
             </div>
-            <div class="section-header">
-                <p>Step into a world filled with excitement, speed, and endless adventure.Feel the rush with thrilling rides packed with twists, turns, and breathtaking drops.Dive into refreshing water attractions that bring cool fun and energy.Share unforgettable moments with family-friendly rides for all age groups.Rediscover the charm of our classic and iconic attractions.Designed with top-level safety, comfort, and innovation in mind.Get ready to explore, enjoy, and create lasting memories!</p>
-            </div>
         </div>
         <br><br>
         <div id="Fun"></div>
     </section>
+
     <section class="experiences-section">
         <div class="section-header">
             <span class="section-label">Discover</span>
             <h1>EXPLORE OUR EXPERIENCES</h1>
-            <p>Discover a world filled with fun, adventure, and unforgettable moments.Enjoy thrilling attractions designed to excite every visitor.Relax and unwind with immersive and refreshing experiences.Taste delicious food and explore vibrant entertainment zones.Perfect for families, friends, and adventure seekers alike. Every experience is crafted for comfort, safety, and joy. Step in, explore more, and create lasting memories!</p>
+            <p>Discover a world filled with fun, adventure, and unforgettable moments. Enjoy thrilling attractions designed to excite every visitor. Relax and unwind with immersive and refreshing experiences. Perfect for families, friends, and adventure seekers alike.</p>
         </div>
         <div class="info-section">
             <div class="info-card">
@@ -231,13 +228,14 @@
             </div>
         </div>
     </section>
+
     <div id="Offer"></div>
     <section class="offers-section">
         <br><br>
         <div class="section-header">
             <span class="section-label">Deals</span>
             <h1>UNMISSABLE OFFERS</h1>
-            <p>Grab the best deals and make your visit even more exciting.Enjoy exclusive discounts on rides, tickets, and combos.Special offers designed for families, friends, and groups.Limited-time deals that bring more fun for less price.Celebrate occasions with exciting buy-one-get-one offers.Save more while experiencing maximum adventure and joy.Don't miss out—book now and unlock amazing savings!</p>
+            <p>Grab the best deals and make your visit even more exciting. Enjoy exclusive discounts on rides, tickets, and combos. Special offers designed for families, friends, and groups. Don't miss out—book now and unlock amazing savings!</p>
         </div>
         <br>
         <center>
@@ -255,7 +253,7 @@
                     <h3>SUMMER EARLY BIRD — LIMITED TICKETS LIVE!</h3>
                     <p>Grab your tickets early and enjoy exclusive discounted entry for a limited time. Limited tickets available — book soon before they sell out!</p>
                     <div class="offer-actions">
-                        <button class="book"><button class="popup-book-btn" onclick="window.open('Booking.html','_blank')"></button>BOOK NOW</button>
+                        <button class="book" onclick="window.open('Booking.html','_blank')">BOOK NOW</button>
                         <button class="details">VIEW DETAILS</button>
                     </div>
                 </div>
@@ -268,19 +266,20 @@
                     <h3>BIRTHDAY OFFER — BUY 1 GET 1 FREE</h3>
                     <p>Celebrate your special day with double the fun! Buy one ticket and get another absolutely free. Valid for birthday guests — bring a friend!</p>
                     <div class="offer-actions">
-                        <button class="book"><button class="popup-book-btn" onclick="window.open('Booking.html','_blank')"></button>BOOK NOW</button>
+                        <button class="book" onclick="window.open('Booking.html','_blank')">BOOK NOW</button>
                         <button class="details">VIEW DETAILS</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <div id="Restaurants"></div>
     <section class="restaurants-section"><br>
         <div class="section-header">
             <span class="section-label">Dine</span>
             <h1>OUR RESTAURANTS</h1>
-            <p>Fuel your adventure with mouth-watering flavours from across the world.From quick bites to sit-down feasts, every meal is an experience in itself.Fresh ingredients, vibrant ambience, and dishes crafted for every craving.</p>
+            <p>Fuel your adventure with mouth-watering flavours from across the world. From quick bites to sit-down feasts, every meal is an experience in itself. Fresh ingredients, vibrant ambience, and dishes crafted for every craving.</p>
         </div>
         <div class="restaurant-slider">
             <div class="restaurant-slides" id="restaurantSlides">
@@ -324,7 +323,6 @@
                         <p>Fresh salads, acai bowls, and wholesome wraps for the health-conscious explorer.</p>
                     </div>
                 </div>
-
             </div>
             <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous">
                 <i class="fa-solid fa-chevron-left"></i>
@@ -335,92 +333,93 @@
             <div class="slider-dots" id="sliderDots"></div>
         </div>
     </section>
-<div id="Events"></div>
-<section class="events-section">
-    <div class="section-header"><br>
-        <span class="section-label">Events</span>
-        <h1>UPCOMING EVENTS</h1>
-        <p>From spectacular shows to seasonal festivals — there's always something happening at Thrillora.
-        Check out our upcoming events and plan your visit around the fun!</p>
+
+    <div id="Events"></div>
+    <section class="events-section">
+        <div class="section-header"><br>
+            <span class="section-label">Events</span>
+            <h1>UPCOMING EVENTS</h1>
+            <p>From spectacular shows to seasonal festivals — there's always something happening at Thrillora. Check out our upcoming events and plan your visit around the fun!</p>
+        </div>
+        <div class="events-container">
+            <div class="event-card">
+                <div class="event-img" style="background: linear-gradient(135deg, #1a3a5c, #2d6a9f);">
+                    <img src="event1.png" alt="Summer Splash Festival">
+                    <div class="event-date-badge">20<span>APR 2026</span></div>
+                    <span class="event-tag">Festival</span>
+                </div>
+                <div class="event-body">
+                    <h3>SUMMER SPLASH FESTIVAL</h3>
+                    <div class="event-meta">
+                        <span><i class="fa-solid fa-clock"></i> 10:00 AM – 8:00 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> All Parks</span>
+                    </div>
+                    <p>Dive into the biggest water carnival of the year! Live music, splash contests, and exclusive ride access for one unforgettable summer day.</p>
+                    <div class="event-actions">
+                        <button class="event-register" onclick="window.open('Booking.html','_blank')">REGISTER NOW</button>
+                        <button class="event-details">VIEW DETAILS</button>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-img" style="background: linear-gradient(135deg, #3a1a5c, #7a2d9f);">
+                    <img src="event2.png" alt="Thrillora Nights">
+                    <div class="event-date-badge">05<span>MAY 2026</span></div>
+                    <span class="event-tag">Night Event</span>
+                </div>
+                <div class="event-body">
+                    <h3>THRILLORA NIGHTS — GLOW PARTY</h3>
+                    <div class="event-meta">
+                        <span><i class="fa-solid fa-clock"></i> 6:00 PM – 11:00 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Chennai & Kochi</span>
+                    </div>
+                    <p>Experience the park after dark! Neon lights, glow-in-the-dark accessories, DJ performances, and special night ride passes await you.</p>
+                    <div class="event-actions">
+                        <button class="event-register" onclick="window.open('Booking.html','_blank')">REGISTER NOW</button>
+                        <button class="event-details">VIEW DETAILS</button>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-img" style="background: linear-gradient(135deg, #1a5c2d, #2d9f5a);">
+                    <img src="event3.png" alt="Junior Thrill Championship">
+                    <div class="event-date-badge">18<span>MAY 2026</span></div>
+                    <span class="event-tag">Competition</span>
+                </div>
+                <div class="event-body">
+                    <h3>JUNIOR THRILL CHAMPIONSHIP</h3>
+                    <div class="event-meta">
+                        <span><i class="fa-solid fa-clock"></i> 9:00 AM – 5:00 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Bengaluru</span>
+                    </div>
+                    <p>The ultimate kids' adventure challenge! Obstacle courses, mini-ride races, and exciting prizes for our bravest young thrill-seekers aged 5–14.</p>
+                    <div class="event-actions">
+                        <button class="event-register" onclick="alert('Registered!')">REGISTER NOW</button>
+                        <button class="event-details">VIEW DETAILS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="popup-overlay" id="ridePopup">
+        <div class="popup-box">
+            <div class="popup-img-wrap">
+                <img id="popup-img" src="" alt="Ride">
+                <span class="popup-ride-tag" id="popup-tag"></span>
+                <button class="popup-close" onclick="closeRidePopup()">&times;</button>
+                <div class="popup-heading" id="popup-name"></div>
+            </div>
+            <div class="popup-body-section">
+                <div class="popup-badges-row" id="popup-badges"></div>
+                <p class="popup-description" id="popup-desc"></p>
+                <div class="popup-stats-grid" id="popup-stats"></div>
+                <div class="popup-action-row">
+                    <button class="popup-book-btn" onclick="window.open('Booking.html','_blank')">BOOK THIS RIDE</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="events-container">
-        <div class="event-card">
-            <div class="event-img" style="background: linear-gradient(135deg, #1a3a5c, #2d6a9f);">
-                <img src="event1.png" alt="Summer Splash Festival">
-                <div class="event-date-badge">20<span>APR 2026</span></div>
-                <span class="event-tag">Festival</span>
-            </div>
-            <div class="event-body">
-                <h3>SUMMER SPLASH FESTIVAL</h3>
-                <div class="event-meta">
-                    <span><i class="fa-solid fa-clock"></i> 10:00 AM – 8:00 PM</span>
-                    <span><i class="fa-solid fa-location-dot"></i> All Parks</span>
-                </div>
-                <p>Dive into the biggest water carnival of the year! Live music, splash contests, and exclusive ride access for one unforgettable summer day.</p>
-                <div class="event-actions">
-                    <button class="event-register" onclick="window.open('Booking.html','_blank')">REGISTER NOW</button>
-                    <button class="event-details">VIEW DETAILS</button>
-                </div>
-            </div>
-        </div>
-        <div class="event-card">
-            <div class="event-img" style="background: linear-gradient(135deg, #3a1a5c, #7a2d9f);">
-                <img src="event2.png" alt="Thrillora Nights">
-                <div class="event-date-badge">05<span>MAY 2026</span></div>
-                <span class="event-tag">Night Event</span>
-            </div>
-            <div class="event-body">
-                <h3>THRILLORA NIGHTS — GLOW PARTY</h3>
-                <div class="event-meta">
-                    <span><i class="fa-solid fa-clock"></i> 6:00 PM – 11:00 PM</span>
-                    <span><i class="fa-solid fa-location-dot"></i> Chennai & Kochi</span>
-                </div>
-                <p>Experience the park after dark! Neon lights, glow-in-the-dark accessories, DJ performances, and special night ride passes await you.</p>
-                <div class="event-actions">
-                    <button class="event-register" onclick="window.open('Booking.html','_blank')">REGISTER NOW</button>
-                    <button class="event-details" onclick="openEventPopup('glowparty')">VIEW DETAILS</button>
-                </div>
-            </div>
-        </div>
-        <div class="event-card">
-            <div class="event-img" style="background: linear-gradient(135deg, #1a5c2d, #2d9f5a);">
-                <img src="event3.png" alt="Junior Thrill Championship">
-                <div class="event-date-badge">18<span>MAY 2026</span></div>
-                <span class="event-tag">Competition</span>
-            </div>
-            <div class="event-body">
-                <h3>JUNIOR THRILL CHAMPIONSHIP</h3>
-                <div class="event-meta">
-                    <span><i class="fa-solid fa-clock"></i> 9:00 AM – 5:00 PM</span>
-                    <span><i class="fa-solid fa-location-dot"></i> Bengaluru</span>
-                </div>
-                <p>The ultimate kids' adventure challenge! Obstacle courses, mini-ride races, and exciting prizes for our bravest young thrill-seekers aged 5–14.</p>
-                <div class="event-actions">
-                    <button class="event-register" onclick="alert('Registered!')">REGISTER NOW</button>
-                    <button class="event-details" onclick="openEventPopup('juniorchamp')">VIEW DETAILS</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="popup-overlay" id="ridePopup">
-    <div class="popup-box">
-        <div class="popup-img-wrap">
-            <img id="popup-img" src="" alt="Ride">
-            <span class="popup-ride-tag" id="popup-tag"></span>
-            <button class="popup-close" onclick="closeRidePopup()">&times;</button>
-            <div class="popup-heading" id="popup-name"></div>
-        </div>
-        <div class="popup-body-section">
-            <div class="popup-badges-row" id="popup-badges"></div>
-            <p class="popup-description" id="popup-desc"></p>
-            <div class="popup-stats-grid" id="popup-stats"></div>
-            <div class="popup-action-row">
-                <button class="popup-book-btn" onclick="window.open('Booking.html','_blank')">BOOK THIS RIDE</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 </body>
 <footer class="footer">
     <div class="footer-container">
@@ -447,11 +446,11 @@
             <h3 class="newsletter-heading">
                 <i class="fa-solid fa-star"></i> Stay Looped Into Fun & Thrills! <i class="fa-solid fa-star"></i>
             </h3>
-           <div class="newsletter">
+            <div class="newsletter">
                 <input type="email" id="emailInput" placeholder="Enter your email address">
                 <p id="msg"></p>
                 <button onclick="validateEmail()">Subscribe</button>
-</div>
+            </div>
         </div>
         <div class="contacts-container">
             <div class="contact-box">
